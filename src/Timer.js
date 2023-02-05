@@ -19,7 +19,6 @@ const Timer = () => {
     intervalId.current = setInterval(() => {
       if (running) {
         if (timerRef.current.mins === 0 && timerRef.current.secs === 0) {
-          // reset
           if (isSession) {
             timerRef.current.mins = breakLength;
             setIsSession(false);
@@ -44,7 +43,6 @@ const Timer = () => {
               : timerRef.current.secs
           }`
         );
-        // Play sound when hitting 00:00:
         if (timerRef.current.secs === 0 && timerRef.current.mins === 0) {
           document.getElementById("beep").play();
         }
@@ -82,7 +80,6 @@ const Timer = () => {
 
   function handleDecOrInc(e) {
     const id = e.target.id;
-
     if (!running) {
       if (id === "break-decrement" && breakLength > 1) {
         if (!isSession) {
