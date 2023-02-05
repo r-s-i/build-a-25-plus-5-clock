@@ -134,30 +134,53 @@ const Timer = () => {
 
   return (
     <div>
-      <div id="timer-label">{isSession ? "Session" : "Break"}</div>
-      <div id="time-left">{timer}</div>
-      <button id="start_stop" onClick={handleStartStop}>
-        Start / Stop
-      </button>
-      <button id="reset" onClick={handleReset}>
-        Reset
-      </button>
-      <div id="break-label">Break Length:</div>
-      <div id="break-length">{breakLength}</div>
-      <div id="session-label">Session Length:</div>
-      <div id="session-length">{sessionLength}</div>
-      <button id="session-decrement" onClick={handleDecOrInc}>
-        S-
-      </button>
-      <button id="session-increment" onClick={handleDecOrInc}>
-        S+
-      </button>
-      <button id="break-decrement" onClick={handleDecOrInc}>
-        B-
-      </button>
-      <button id="break-increment" onClick={handleDecOrInc}>
-        B+
-      </button>
+      <h1>25 + 5 Clock</h1>
+      <div id="display">
+        <span id="time-left">{timer}</span>
+        <span id="timer-label">{isSession ? " (Session)" : " (Break)"}</span>
+        <br />
+        <span id="break-label">Break Length: </span>
+        <span id="break-length">{breakLength}</span>
+        <br />
+        <span id="session-label">Session Length: </span>
+        <span id="session-length">{sessionLength}</span>
+      </div>
+      <div id="buttons">
+        <button id="start_stop" onClick={handleStartStop}>
+          Start / Stop
+        </button>
+        <button id="reset" onClick={handleReset}>
+          Reset
+        </button>
+        <button
+          id="session-increment"
+          className="change-buttons"
+          onClick={handleDecOrInc}
+        >
+          S+
+        </button>
+        <button
+          id="session-decrement"
+          className="change-buttons"
+          onClick={handleDecOrInc}
+        >
+          S-
+        </button>
+        <button
+          id="break-increment"
+          className="change-buttons"
+          onClick={handleDecOrInc}
+        >
+          B+
+        </button>
+        <button
+          id="break-decrement"
+          className="change-buttons"
+          onClick={handleDecOrInc}
+        >
+          B-
+        </button>
+      </div>
     </div>
   );
 };
