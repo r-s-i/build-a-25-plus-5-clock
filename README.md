@@ -1,6 +1,6 @@
 # Build a 25 + 5 Clock
 
-A 25 + 5 Clock (pomodoro-like) timer built with React. It allows you to break your work into focused intervals separated by short breaks. It was made as part of taking the freeCodeCamp's Front End Development Libraries Certification.
+A 25 + 5 (pomodoro-like) timer built with React. It allows you to break your work into focused intervals separated by short breaks. It was made as part of taking the freeCodeCamp's Front End Development Libraries Certification.
 
 Features
 
